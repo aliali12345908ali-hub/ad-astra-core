@@ -2,26 +2,31 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Ad Astra - Dashboard</title>
+    <title>Ad Astra - Autonomous Dashboard</title>
     <style>
-        body { font-family: system-ui, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; }
+        body { font-family: system-ui, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; max-width: 800px; margin: auto; }
         .card { background: #1e293b; border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
-        h1 { color: #38bdf8; }
+        h1 { color: #38bdf8; text-align: center; }
         .status { color: #4ade80; font-weight: bold; }
         code { background: #0f172a; padding: 4px 8px; border-radius: 4px; color: #f43f5e; }
+        .bank-info { background: #090d16; padding: 10px; border-radius: 6px; margin-top: 10px; }
     </style>
 </head>
 <body>
     <h1>🚀 Ad Astra Autonomous Core</h1>
     <div class="card">
-        <h3>المالك والمؤسس: Abdallah Ben Belgacem</h3>
-        <p>حالة النظام: <span class="status">نشط ويعمل بنجاح (AUTONOMOUS)</span></p>
-        <p>التشفير والتدقيق: <code>SHA-256 Verified</code></p>
+        <h3>المؤسس والمالك القانوني: Abdallah Ben Belgacem</h3>
+        <p>حالة النظام: <span class="status">يعمل في وضع الإنتاج المستقل (Production Ready)</span></p>
+        <p>بروتوكول الأمان: <code>SHA-256 Cryptographic Audit Trail</code></p>
     </div>
     <div class="card">
-        <h3>بيانات التحويل البنكي (SEPA / IBAN)</h3>
-        <p><b>IBAN:</b> FR76 1659 8000 0140 0014 2630 322</p>
-        <p><b>BIC/SWIFT:</b> FPELFR21XXX</p>
+        <h3>البيانات البنكية المعتمدة للتحويلات (SEPA / IBAN)</h3>
+        <div class="bank-info">
+            <p><b>صاحب الحساب:</b> MR ABDALLAH BEN BELGACEM</p>
+            <p><b>IBAN:</b> FR76 1659 8000 0140 0014 2630 322</p>
+            <p><b>BIC/SWIFT:</b> FPELFR21XXX</p>
+            <p><b>المقر:</b> FPE Charenton, 94220 Charenton Le Pont</p>
+        </div>
     </div>
 </body>
 </html>
