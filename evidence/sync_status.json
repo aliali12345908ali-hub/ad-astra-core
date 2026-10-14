@@ -1,0 +1,6 @@
+{
+  "node_id": "termux-primary-node",
+  "sync_timestamp": "2026-10-14T17:41:31.236080+00:00",
+  "status": "SECURED_AND_REPLICATED",
+  "mesh_nodes_active": 3
+}
