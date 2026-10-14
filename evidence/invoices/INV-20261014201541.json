@@ -1,0 +1,13 @@
+{
+    "invoice_id": "INV-20261014201541",
+    "issue_date": "2026-10-14T18:15:41.072167+00:00",
+    "issuer": "MR ABDALLAH BEN BELGACEM",
+    "client": "Enterprise Client Ltd",
+    "service": "Ad Astra Autonomous Infrastructure License",
+    "amount": 2500.0,
+    "currency": "EUR",
+    "payment_info": {
+        "iban": "FR76 1659 8000 0140 0014 2630 322",
+        "swift": "FPELFR21XXX"
+    }
+}
