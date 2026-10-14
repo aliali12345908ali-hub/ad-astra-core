@@ -1,0 +1,16 @@
+{
+    "invoice_id": "INV-20261014-203233",
+    "issue_date": "2026-10-14 20:32:33",
+    "owner": "Abdallah Ben Belgacem",
+    "client": "Global Client SARL",
+    "amount": 1500.0,
+    "currency": "EUR",
+    "description": "Autonomous Core Consulting & Setup Services",
+    "bank_details": {
+        "account_holder": "MR ABDALLAH BEN BELGACEM",
+        "iban": "FR76 1659 8000 0140 0014 2630 322",
+        "bic_swift": "FPELFR21XXX",
+        "bank_name": "FPE Charenton",
+        "city": "94220 Charenton Le Pont"
+    }
+}
