@@ -1,0 +1,22 @@
+name: Ad Astra Cloud Autonomous Core
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  run-core:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Core
+        run: |
+          echo "Ad Astra Core Engine Running Successfully"
