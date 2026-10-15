@@ -33,15 +33,6 @@ def init_database():
             FOREIGN KEY(project_id) REFERENCES projects(project_id)
         );
     """)
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS worker_leases (
-            task_id TEXT PRIMARY KEY,
-            worker_id TEXT NOT NULL,
-            fence_token INTEGER NOT NULL,
-            expires_at TEXT NOT NULL,
-            FOREIGN KEY(task_id) REFERENCES tasks(task_id)
-        );
-    """)
     cursor.execute("INSERT OR IGNORE INTO wallets (wallet_id, owner_name, balance, updated_at) VALUES ('master-treasury', 'Master Treasury', 5000.0, ?);", 
                    (datetime.datetime.now(datetime.timezone.utc).isoformat(),))
     conn.commit()
@@ -91,9 +82,21 @@ def acquire_task_lease(task_id, worker_id, lease_duration_seconds=30):
             if current_expiry > now.isoformat() and current_worker != worker_id:
                 return None
             new_token = current_token + 1
-            cursor.execute("""
-                UPDATE worker_leases 
-                SET worker_id = ?, fence_token
+    cursor.execute("""
+        UPDATE worker_leases
+        SET worker_id = ?, fence_token = ?
+        WHERE task_id = ?
+    """, (worker_id, fence_token, task_id))
+    WHERE task_id = ?
+    """, (worker_id, fence_token, task_id))
+    WHERE task_id = ?
+    """, (worker_id, fence_token, task_id))
+        """
+    UPDATE worker_leases
+    SET worker_id = ?, fence_token = ?
+    WHERE task_id = ?
+    """, (worker_id, fence_token, task_id))
+
 
 
 rm -f evidence/audit_trail.jsonl
